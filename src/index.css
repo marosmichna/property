@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #F8F2F2;
+}
+
+@layer base {
+  li {
+     @apply cursor-pointer;
+     font-weight: 700;
+     font-size: 20px;
+     line-height: 30px;
+  }
+}
+
+ /* li.active:before {
+ position: absolute;
+ content: "";
+ width: 35%;
+ height: 1px;
+ border-bottom: 2px solid black;
+ bottom: -4px;
+}
+
+  ul li:before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 1px;
+  border-bottom: 2px solid black;
+  bottom: -4px;
+  transition: all 0.3s;
+}    */
+li.active:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  border-bottom: 2px solid black;
+  width: 35%;
+  left: 0;
+  bottom: 0;
+}
+
+li:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  border-bottom: 2px solid black;
+  width: 0%;
+  left: 0;
+  bottom: 0;
+}
+
+li:hover:after {
+  width: 35%;
+  transition: 0.3s;
+}
+
+
